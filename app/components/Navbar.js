@@ -2,7 +2,6 @@
  * Created by v-yunjia on 2016/8/18.
  */
 import React from 'react';
-import {Link} from 'react-router';
 import NavbarStore from '../stores/NavbarStore';
 import NavbarActions from '../actions/NavbarActions';
 
@@ -17,14 +16,21 @@ class Navbar extends React.Component {
         NavbarActions.getCurUser();
     }
     onChange(state) {
-    this.setState(state);
+     this.setState(state);
     }
 
     render() {
         let user=this.state.user;
         return (
            <header className='main-header'>
-               <nav className='navbar navbar-static-top'>
+               <a href="#" className="logo">
+                   <span className="logo-mini"><b>A</b>LT</span>
+                   <span className="logo-lg"><b>Admin</b>LTE</span>
+               </a>
+               <nav className='navbar navbar-static-top' role="navigation">
+                   <a href="#" className="sidebar-toggle" data-toggle="offcanvas" role="button">
+                       <span className="sr-only">Toggle navigation</span>
+                   </a>
                 <div className='navbar-custom-menu'>
                   <ul className='nav navbar-nav'>
                       <li className="dropdown user user-menu">
@@ -33,9 +39,12 @@ class Navbar extends React.Component {
                                   <span className="hidden-xs">{user.name}</span>
                               </a>
                       </li>
-
+                      <li>
+                          <a href="#" data-toggle="control-sidebar"><i className="fa fa-gears"></i></a>
+                      </li>
                   </ul>
                 </div>
+
                </nav>
            </header>
         );

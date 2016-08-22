@@ -3,13 +3,18 @@
  */
 import React from 'react';
 import {RouteHandler} from 'react-router';
-import Navbar from './Navbar'
+import Navbar from './Navbar';import Siderbar from './Siderbar'
+
 class App extends React.Component{
     render(){
         return (
-            <div>
-            <RouteHandler/>
-            </div>
+              <div className="wrapper">
+                  <Navbar />
+                  <Siderbar />
+                  <RouteHandler/>
+              </div>
+
+
         );
     }
 

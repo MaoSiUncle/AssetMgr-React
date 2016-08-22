@@ -31,8 +31,9 @@ var dependencies = [
  */
 gulp.task('vendor', function() {
     return gulp.src([
-        'app/bower_components/jquery/dist/jquery.js',
-        'app/bower_components/bootstrap/dist/js/bootstrap.min.js',
+        'app/bower_components/AdminLTE/plugins/jquery/jquery-2.2.3.min.js',
+        'app/bower_components/AdminLTE/bootstrap/js/bootstrap.min.js',
+        'app/bower_components/AdminLTE/dist/js/app.min.js'
 
 
     ]).pipe(concat('vendor.js'))

@@ -4,10 +4,9 @@
 import React from 'react';
 import {Route} from 'react-router';
 import App from './components/App';
-import Navbar from './components/Navbar';
-
+import Home from './components/Home';
 export default (
     <Route handler={App}>
-        <Route path='/' handler={Navbar} />
+        <Route path='/' handler={Home}/>
     </Route>
 );

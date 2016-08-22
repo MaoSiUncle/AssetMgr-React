@@ -16,6 +16,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/api/user/login',function(req,res,next){
     res.send({name:"hello"});
 });
+app.get('/api/menu/load',function(req,res,next){
+    res.send({opr:"Search",text:"Device"});
+
+})
 app.use(function(req, res) {
     Router.run(routes, req.path, function(Handler) {
         var html = React.renderToString(React.createElement(Handler));

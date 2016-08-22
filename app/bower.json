@@ -2,7 +2,7 @@
   "name": "AssetMgr-React",
   "version": "0.0.1",
   "dependencies": {
-    "jquery": "^3.1.0",
+    "jquery": "^2.1.4",
     "AdminLTE": "adminlte#^2.3.6"
   }
 }
